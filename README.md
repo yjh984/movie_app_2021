@@ -1,0 +1,3 @@
+# Movie App 2020, to learn React...
+
+To learning React JS by making Movie App 2020!
