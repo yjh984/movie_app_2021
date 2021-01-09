@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Movies.css';
 
-function Movies({year, rating, title, genres, summary, poster}){
+function Movies({id, year, rating, title, genres, summary, poster}){
     // let genresSlash='';
     // genres.forEach(item=>{
     //     genresSlash = genresSlash+item + '/';
@@ -10,10 +11,26 @@ function Movies({year, rating, title, genres, summary, poster}){
     // console.log(genresSlas.substr(genresSlash));
     // genresSlash=genresSlash.slice(0,genresSlash.length-1);
 
-    return (<div className='movie'>
+    return (
+            <div className='movie'>
+                
                 <img src={poster} alt={title} title={title}/>
+
                 <div className='movie__data'>
+                <Link to={{
+                    pathname: `/movie/id${id}`,
+                    state: {
+                        id,
+                        year,
+                        rating,
+                        title,
+                        genres,
+                        summary,
+                        poster
+                    }
+                }}>
                     <h2 className='movie__title'>{title}</h2>
+                    </Link>    
                     <h4 className='movie__year'>{year} / {rating}</h4>
                     <ul className='movie__genres'>
                         {genres.map((item, index)=> (
@@ -21,8 +38,9 @@ function Movies({year, rating, title, genres, summary, poster}){
                         ) }    
                     </ul>
                     {/* <h4 className='movie__genres'>{genresSlash}</h4> */}
-                    <p className='movie__summary'>{summary.slice(0,300)}...</p>
+                    <p className='movie__summary'>{summary.slice(0,200)}...</p>
                 </div>
+
             </div>
             );
 }
