@@ -10,6 +10,21 @@ function Movies({id, year, rating, title, genres, summary, poster}){
     // })
     // console.log(genresSlas.substr(genresSlash));
     // genresSlash=genresSlash.slice(0,genresSlash.length-1);
+    let temp_s ='';
+    if(summary.length<300){
+        var i;
+        // temp_s+=" .";
+        for (i = 0; i < (300-summary.length)/2; i++) {
+            temp_s+=" \u00A0";
+            // temp_s=temp_s.slice(0,temp_s.length-3)+temp_s.slice(temp_s.length-2, temp_s.length);
+            // console.log(temp_s);
+        }
+        temp_s+=".";
+        // console.log(temp_s);
+    }
+    temp_s = summary+"....."+temp_s;
+    // let temp_s="<p>&nbsp;&nbsp;&nbsp;!</p>"
+    // let temp_s="\u00A0\u00A0\u00A0\u00A0\u00A0!"
 
     return (
             <div className='movie'>
@@ -38,7 +53,7 @@ function Movies({id, year, rating, title, genres, summary, poster}){
                         ) }    
                     </ul>
                     {/* <h4 className='movie__genres'>{genresSlash}</h4> */}
-                    <p className='movie__summary'>{summary.slice(0,200)}...</p>
+                    <p className='movie__summary'>{temp_s}</p>
                 </div>
 
             </div>

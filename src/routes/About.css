@@ -5,17 +5,20 @@
     border-radius: 5px;
     background-color: white;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 70px;
     /* margin-bottom: 500px; */
-    max-width: 25%;
-    font-weight: 300;
+    max-width: 60%;
+    font-weight: 500;
   }
   
   .about__container span:first-child {
-    font-size: 20px;
+    font-size: 13px;
   }
   
   .about__container span:last-child {
     display: block;
     margin-top: 10px;
+    font-size: 7px;
+    text-align: right;
+    font-weight: 200;
   }

@@ -60,16 +60,16 @@ class Home extends React.Component{
       <section className='container'>
         <div className='front'>
           {isLoading? '' : 
-            isYear? (<h1>YEAR {searchYear}.</h1>) : <h1>All YEAR.</h1>}
-          <div>
+            isYear? (<h3>YEAR {searchYear}</h3>) : <h3>All YEAR.</h3>}
+          <div className='btn'>
           {isLoading? '' : 
-            isYear? (<button onClick={this.handleBtnMinusYear}>Previous Year</button>) : ""}
+            isYear? (<button onClick={this.handleBtnMinusYear}>Year-1</button>) : ""}
           {isLoading? '' : 
-            isYear? (<button onClick={this.handleBtnAddYear}>Next Year</button>) : ""}
-          </div>
-          <div>
-          {isLoading? '' : (<button onClick={this.handleBtnAllList}>All Movies</button>)}
-          {isLoading? '' : (<button onClick={this.handleBtnBackToYear}>Back to this year</button>)}
+            isYear? (<button onClick={this.handleBtnAddYear}>Year+1</button>) : ""}
+          {isLoading? '' : 
+            isYear? (<button onClick={this.handleBtnAllList}>Years..</button>) : ""}
+          {isLoading? '' : 
+            isYear? '' : (<button onClick={this.handleBtnBackToYear}>BackToYear</button>)}
           </div>
         </div>
 
