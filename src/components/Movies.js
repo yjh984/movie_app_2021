@@ -22,7 +22,7 @@ function Movies({id, year, rating, title, genres, summary, poster}){
         temp_s+=".";
         // console.log(temp_s);
     }
-    temp_s = summary+"....."+temp_s;
+    temp_s = summary.slice(0,300)+"....."+temp_s;
     // let temp_s="<p>&nbsp;&nbsp;&nbsp;!</p>"
     // let temp_s="\u00A0\u00A0\u00A0\u00A0\u00A0!"
 
