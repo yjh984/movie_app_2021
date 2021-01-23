@@ -6,7 +6,12 @@
 
 .front {
   display: inline;
-  margin-left: 5px;
+  margin-left: 10px;
+}
+
+.year_ {
+  position: sticky;
+  top: 0;
 }
 
 .btn {
@@ -19,6 +24,8 @@
   text-decoration: none;
   font-size: 16px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: sticky;
+  top: 50px;
 }
 
 .loader {

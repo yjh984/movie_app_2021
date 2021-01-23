@@ -59,8 +59,10 @@ class Home extends React.Component{
     return (
       <section className='container'>
         <div className='front'>
+          <div className='year_'>
           {isLoading? '' : 
             isYear? (<h3>YEAR {searchYear}</h3>) : <h3>All YEAR.</h3>}
+          </div>
           <div className='btn'>
           {isLoading? '' : 
             isYear? (<button onClick={this.handleBtnMinusYear}>Year-1</button>) : ""}
